@@ -8,26 +8,21 @@ document.querySelectorAll("button").forEach(button => {
 
         if ("0123456789.".includes(button)) {
             display.append(button);
-        } else if ("C".includes(button)) {
-            display.innerText = "";
-            result.innerText = "";
-        } else if ("=".includes(button)) {
+        } else if (button === "C") {
+            display.textContent = "";
+            result.textContent = "";
+        } else if (button === "=") {
             let resultNumber = Function("return " + displayNumber + result.textContent.trim())();
-            display.innerText = "";
+            display.textContent = "";
             result.append(resultNumber);
         } else if ("/*-+".includes(button)) {
             display.append(result.textContent.trim())
             display.append(button);
-            result.innerHTML = "";
+            result.textContent = "";
         } else if ("Raise".includes(button)) {
-            displayNumber = displayNumber.split("").slice(0, displayNumber.length - 1).join("");
-            display.innerHTML = "";
-            display.append(displayNumber);
+            display.textContent = displayNumber.slice(0, - 1);
         }
-        if (display.textContent != "") {
-            result.style.visibility = "hidden";
-        } else if (display.textContent == "") {
-            result.style.visibility = "visible";
-        }
+        result.style.visibility = display.textContent ? "hidden" : "visible";
+
     });
 })

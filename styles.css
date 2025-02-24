@@ -41,3 +41,8 @@ body {
     height: 80%;
     width: 100%;
 }
+
+button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+}
