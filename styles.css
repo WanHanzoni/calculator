@@ -10,15 +10,28 @@ body {
 
 #head {
     background-color: rgb(0 0 256 / 30%);
-    padding-right: 5%;
     padding-top: 3%;
     padding-bottom: 2%;
-    font-size: 7vh;
+    padding-right: 5%;
+    padding-left: 5%;
     box-sizing: border-box;
+    min-height: fit-content;
+    height: 20%;
+}
+
+/* #result {
+    text-align: left;
+    align-content: baseline;
+    font-size: 5vh;
+    min-height: 5vh;
+} */
+
+#display,
+#result {
     text-align: right;
     align-content: end;
-    height: 20%;
-    overflow: overlay;
+    font-size: 7vh;
+    /* min-height: 7vh; */
 }
 
 #container {
