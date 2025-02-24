@@ -29,7 +29,6 @@ document.querySelectorAll("button").forEach(button => {
             var result = Function("return " + memoryNumber)();
             display.append(result);
         }
-
     });
 
 });
