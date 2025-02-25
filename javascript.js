@@ -17,7 +17,7 @@ function handleInput(button) {
         display.append(result.textContent.trim())
         display.append(button);
         result.textContent = "";
-    } else if (button === "Raise" || button === "Backspace") {
+    } else if (button === "Backspace") {
         display.textContent = displayNumber.slice(0, - 1);
     }
     result.style.visibility = display.textContent ? "hidden" : "visible";
